@@ -43,7 +43,7 @@ const Genre = () => {
     );
   };
 
-  const getSingleGenre = (id) => {
+  const getSingleGenre = (id: any) => {
     return genres.find((genre) => genre.id.toString() === id)?.name || "";
   };
 
@@ -74,7 +74,7 @@ const Genre = () => {
                 />
                 <h3 className="mt-5 font-medium">{movie.title}</h3>
                 <p className="text-gray">
-                  {/* {getGenre(movie.genre_ids).join(", ")} */}
+                  {getGenre(movie.genre_ids).join(", ")}
                 </p>
                 <p className="mt-3 text-slate-500 ">
                   {new Date(movie.release_date).toUTCString().slice(0, 16)}
